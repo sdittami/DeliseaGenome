@@ -62,9 +62,6 @@ Builds a repeat library from the clean genome with RepeatModeler 2.0.3 (713 fami
 ### 09 — `09_braker3_gene_prediction.sh`
 Structural gene annotation with BRAKER3 (braker.pl 3.0.5, ETP mode) using the soft-masked genome, the sorted TopHat2 alignments and the OrthoDB v11 Eukaryota protein set. Also prepares the inputs (protein download, BAM sorting, AUGUSTUS config copy). The `braker.pl` call is taken from the BRAKER log.
 
-### 10 — `10_busco.sh`
-Assesses completeness with BUSCO against `eukaryota_odb10`.
-
 ### `ena_submission/`
 Post-processing of the EMBL flat file generated for submission to ENA, to fix validation errors. Run in this order:
 
