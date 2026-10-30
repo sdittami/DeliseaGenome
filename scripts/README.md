@@ -17,7 +17,6 @@ scripts/
 ├── 07_tophat2_map_rnaseq.sh
 ├── 08_repeatmodeler_repeatmasker.sh
 ├── 09_braker3_gene_prediction.sh
-├── 10_busco.sh
 ├── ena_submission/
 │   ├── 1_remove_duplicate_features.py
 │   ├── 2_clean_embl_qualifiers.py
@@ -57,13 +56,10 @@ Removal of non-target (contaminant) contigs with Anvi'o 8:
 Builds a Bowtie2 index of the clean genome and maps the paired-end RNA-seq libraries (24 libraries: Control, AD1, AD10 at 24 h and 48 h, 4 replicates each; deduplicated reads from Hudson et al. 2022) with TopHat 2.1.1. The resulting alignments are used as evidence for gene prediction and to check which contigs are supported by transcripts.
 
 ### 08 — `08_repeatmodeler_repeatmasker.sh`
-Builds a repeat library from the clean genome with RepeatModeler 2.0.3 (713 families found) and soft-masks the genome with RepeatMasker 4.1.2 before gene prediction. Reconstructed from the RepeatModeler log; the RepeatMasker options are inferred.
+Builds a repeat library from the clean genome with RepeatModeler 2.0.3 (713 families found) and soft-masks the genome with RepeatMasker 4.1.2 before gene prediction.
 
 ### 09 — `09_braker3_gene_prediction.sh`
 Structural gene annotation with BRAKER3 (braker.pl 3.0.5, ETP mode) using the soft-masked genome, the sorted TopHat2 alignments and the OrthoDB v11 Eukaryota protein set. Also prepares the inputs (protein download, BAM sorting, AUGUSTUS config copy). The `braker.pl` call is taken from the BRAKER log.
-
-### 10 — `10_busco.sh`
-Assesses completeness with BUSCO against `eukaryota_odb10`.
 
 ### `ena_submission/`
 Post-processing of the EMBL flat file generated for submission to ENA, to fix validation errors. Run in this order:
