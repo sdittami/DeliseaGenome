@@ -25,9 +25,6 @@ srun --mem=20G anvi-merge profile_miseq/PROFILE.db profile_pacbio/PROFILE.db -o 
 ## Taxonomy (anvio)
 anvi-run-scg-taxonomy --scgs-taxonomy-data-dir scgs-data -c contigs.db
 
-## Bining
-srun --mem=20G anvi-cluster-contigs -p ./profile_merged/PROFILE.db -c contigs.db -C collection_concot_profile_merged --driver concoct
-
 ## ANVI-INTERACTIVE
 hostname -I
 anvi-interactive -p profile_merged/PROFILE.db -c contigs.db
