@@ -49,8 +49,7 @@ Removal of non-target (contaminant) contigs with Anvi'o 8:
 1. Build the contigs database and annotate it with HMMs and NCBI COGs.
 2. Predict taxonomy of gene calls with Kaiju (nr_euk database, 2023-05-10) and import it into Anvi'o.
 3. Profile the MiSeq and PacBio CCS mappings and merge the profiles.
-4. Run Anvi'o single-copy-gene taxonomy and cluster contigs with CONCOCT.
-5. Launch `anvi-interactive` for manual binning. The bin with substantial MiSeq and PacBio coverage (bin 52) is the *D. pulchra* genome.
+4. Launch `anvi-interactive` for manual binning. The bin with substantial MiSeq and PacBio coverage (bin 52) is the *D. pulchra* genome.
 
 ### 07 — `07_tophat2_map_rnaseq.sh`
 Builds a Bowtie2 index of the clean genome and maps the paired-end RNA-seq libraries (24 libraries: Control, AD1, AD10 at 24 h and 48 h, 4 replicates each; deduplicated reads from Hudson et al. 2022) with TopHat 2.1.1. The resulting alignments are used as evidence for gene prediction and to check which contigs are supported by transcripts.
