@@ -13,8 +13,6 @@
 # Input:  adapter-clean HiFi reads (step 01) + primary contig assembly (HiFiasm, FASTA)
 # Output: minimap2_css_sorted.bam (+ .bai), used for Anvi'o profiling in step 06
 
-set -euo pipefail
-
 module load minimap2
 module load samtools
 
