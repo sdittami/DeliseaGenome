@@ -31,7 +31,7 @@ scripts/
 ## Scripts
 
 ### 01 — `01_cutadapt_trim_hifi.sh`
-Removes residual SMRTbell adapters from the PacBio HiFi (CCS) reads with Cutadapt 2.8. *Template script: check adapter sequences and parameters against the original run.*
+Removes residual SMRTbell adapters from the PacBio HiFi (CCS) reads with Cutadapt 2.8. 
 
 ### 02 — `02_hifiasm_assembly.sh`
 De novo assembly of the cleaned HiFi reads with HiFiasm 0.15.1 (default parameters, 16 threads), followed by GFA → FASTA conversion of the primary contigs (`01_dpulchra_CCS.asm.bp.p_ctg.fasta`).
